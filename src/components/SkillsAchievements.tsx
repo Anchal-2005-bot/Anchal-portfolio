@@ -11,7 +11,7 @@ const skillsLayout = [
 ];
 
 const achievementsList = [
-  "Solved 100+ DSA problems on LeetCode (https://leetcode.com/u/anchalthakur7239/)",
+  "Solved 100+ DSA problems on LeetCode: https://leetcode.com/u/anchalthakur7239/",
   "Completed job simulations by Deloitte and AWS (Forage)",
   "Completed Generative AI training via Microsoft & LinkedIn Learning",
   "Content Writing Intern at Inamigos Foundation (NGO)",

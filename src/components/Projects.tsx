@@ -10,7 +10,7 @@ const projects = [
     category: "Python • NLP • ML • Streamlit",
     description: "Developed an AI application using NLP and ML to analyze student text and identify early signs of stress and burnout. Implemented sentiment analysis and risk-level classification with an interactive dashboard.",
     link: "https://mindfulcheck09.netlify.app/",
-    image: "/project_1.png",
+    image: "/mindfulcheck.png",
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const projects = [
     category: "Python • ML • ATS",
     description: "Built an ATS-based Resume Analyzer to evaluate resumes against job descriptions using machine learning. Implemented resume scoring, keyword matching, and candidate ranking.",
     link: "https://resumeinsighthub.netlify.app/",
-    image: "/project_1.png", 
+    image: "/resumeanalyzer.png", 
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const projects = [
     category: "Python • APIs • Backend",
     description: "Developed a travel planning application generating optimized itineraries based on user preferences. Integrated APIs for routing, distance calculation, and real-time updates.",
     link: "https://github.com/Anchal-2005-bot/roamandrelax",
-    image: "/project_1.png",
+    image: "/roamandrelax.png",
   }
 ];
 
