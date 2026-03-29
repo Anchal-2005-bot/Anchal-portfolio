@@ -14,7 +14,7 @@ export default function Contact() {
           className="text-center md:text-left"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            Let's <span className="text-[#C8A96A]">Connect</span>
+            Let&apos;s <span className="text-[#C8A96A]">Connect</span>
           </h2>
           <p className="text-[#EAEAEA]/60 font-light max-w-sm mb-6">
             Actively looking for exciting opportunities and collaborations. Feel free to reach out.
