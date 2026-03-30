@@ -1,36 +1,90 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Anchal Kumari — Personal Portfolio
+A personal portfolio website showcasing my work, experience, and skills in Artificial Intelligence and Machine Learning.
 
-## Getting Started
+About
+This is the source code for my personal portfolio — built to highlight my projects, internships, and technical skills as a second-year AI/ML engineering student at Heritage Institute of Technology, Kolkata.
 
-First, run the development server:
+Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+link: anchalportfolio111.netlify.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Hero section — Full-screen intro with name, tagline, and CTA buttons
+What I Do — 4-card grid covering my core skill areas
+Stats bar — Key numbers at a glance (projects, internships, CGPA, DSA solved)
+Selected Works — 3 featured projects with tech stack and links
+Professional Experience — Internship timeline with achievement-first bullet points
+Resume — Embedded PDF preview with download button
+Achievements — Certifications, simulations, volunteering
+Technical Skills — Languages, tools, frameworks
+Let's Connect — Footer CTA with email and social links
+Smooth transitions — Scroll-triggered section reveals, hover animations, page load fade-ins
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+Projects Featured
+ProjectDescriptionStackMindful CheckAI early warning system for student mental healthPython, NLP, Scikit-learn, Transformers, StreamlitResume Insight HubATS-based resume analyzer and candidate ranking toolPython, ML, NLPRoam & RelaxTravel planner with optimized itineraries via real-time APIsPython, APIs, Flask
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Replace GitHub links with your actual repository URLs.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+Tech Stack
+Languages: Python · Java · C · R
+Web: HTML · CSS · JavaScript · Flask
+ML / Data: Scikit-learn · NumPy · Pandas · RStudio · Jupyter Notebook
+Tools: Git · GitHub · VS Code
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Getting Started
+Prerequisites
+Make sure you have Node.js installed (if using a JS framework).
+Installation
+bash# Clone the repository
+git clone https://github.com/your-username/portfolio.git
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Navigate into the project
+cd portfolio
+
+# Install dependencies
+npm install
+Running locally
+bashnpm run dev
+Open http://localhost:3000 in your browser.
+Build for production
+bashnpm run build
+
+Folder Structure
+portfolio/
+├── public/
+│   ├── anchal-resume.pdf     # Resume PDF (download link source)
+│   └── images/               # All portfolio images
+├── src/
+│   ├── components/           # Reusable UI components
+│   ├── sections/             # Page sections (Hero, Works, Experience, etc.)
+│   └── styles/               # Global styles and theme
+├── README.md
+└── package.json
+
+Update this tree to match your actual project structure.
+
+
+Deployment
+This portfolio is deployed via Vercel (or update to your platform).
+To deploy your own fork:
+
+Push to GitHub
+Import the repo on vercel.com
+Hit Deploy — no config needed for most frameworks
+
+
+Contact
+Anchal Kumari
+📧 anchal.kumari.aiml28@heritageit.edu
+📍 Kolkata, West Bengal
+🔗 LinkedIn · GitHub
+
+Replace the LinkedIn and GitHub URLs with your actual profile links.
+
+
+License
+This project is open source and available under the MIT License.
