@@ -6,39 +6,45 @@ import Image from 'next/image';
 const projects = [
   {
     id: 1,
-    title: "Mindful Check (AI Early Warning)",
-    category: "Python • NLP • ML • Streamlit",
-    description: "Developed an AI application using NLP and ML to analyze student text and identify early signs of stress and burnout. Implemented sentiment analysis and risk-level classification with an interactive dashboard.",
+    title: "Mindful Check",
+    subtitle: "AI Early Warning System for Student Mental Health",
+    category: "Python · Scikit-learn · NLP · Transformers · Streamlit",
+    description: "An NLP + ML application that analyzes student-written text to detect early signs of stress, anxiety, and burnout. Includes sentiment analysis, emotion detection, and risk-level classification (Low / Medium / High) with an interactive Streamlit dashboard.",
     link: "https://mindfulcheck09.netlify.app/",
     image: "/mindfulcheck.png",
+    date: "Jan 2026"
   },
   {
     id: 2,
     title: "Resume Insight Hub",
-    category: "Python • ML • ATS",
-    description: "Built an ATS-based Resume Analyzer to evaluate resumes against job descriptions using machine learning. Implemented resume scoring, keyword matching, and candidate ranking.",
+    subtitle: "ATS-Based Resume Analyzer",
+    category: "Python · ML · NLP · ATS · Resume Parsing",
+    description: "Evaluates resumes against job descriptions using ML-based scoring, keyword matching, and candidate ranking. Built to simulate real ATS pipelines.",
     link: "https://resumeinsighthub.netlify.app/",
-    image: "/resumeanalyzer.png", 
+    image: "/resumeanalyzer.png",
+    date: "Oct 2025"
   },
   {
     id: 3,
-    title: "Roam and Relax (Travel Planner)",
-    category: "Python • APIs • Backend",
-    description: "Developed a travel planning application generating optimized itineraries based on user preferences. Integrated APIs for routing, distance calculation, and real-time updates.",
+    title: "Roam & Relax",
+    subtitle: "Smart Travel Planner",
+    category: "Python · APIs · Route Optimization · Backend Development",
+    description: "Generates optimized travel itineraries based on user preferences using third-party APIs for routing, distance calculation, and real-time updates.",
     link: "https://github.com/Anchal-2005-bot/roamandrelax",
     image: "/roamandrelax.png",
+    date: "Aug 2025"
   }
 ];
 
 export default function Projects() {
   return (
-    <section className="relative w-full bg-[#121212] py-32 px-6 md:px-12 lg:px-24 text-[#EAEAEA] z-20">
+    <section id="work" className="relative w-full bg-[#121212] py-32 px-6 md:px-12 lg:px-24 text-[#EAEAEA] z-20">
       <div className="max-w-7xl mx-auto">
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-50px" }}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-16 tracking-tight">
             Selected <span className="text-[#C8A96A]">Works</span>
@@ -52,11 +58,12 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: i * 0.1, ease: "easeOut" }}
+              transition={{ duration: 0.5, delay: i * 0.1, ease: "easeOut" }}
               viewport={{ once: true, margin: "-50px" }}
-              className="group relative rounded-2xl overflow-hidden cursor-pointer bg-white/5 backdrop-blur-md border border-[#C8A96A]/20 transition-all duration-500 hover:border-[#C8A96A]/60 hover:shadow-[0_0_30px_rgba(200,169,106,0.15)] hover:-translate-y-2 block"
+              style={{ transitionProperty: 'transform, background-color, border-color, box-shadow', transitionDuration: '0.3s, 0.5s, 0.5s, 0.5s', transitionTimingFunction: 'ease' }}
+              className="group relative rounded-2xl overflow-hidden cursor-pointer bg-white/5 backdrop-blur-md border border-[#C8A96A]/20 hover:border-[#C8A96A]/60 hover:shadow-[0_0_30px_rgba(200,169,106,0.15)] hover:-translate-y-1 block"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
@@ -69,12 +76,20 @@ export default function Projects() {
               </div>
               
               <div className="p-6 relative z-10 bg-gradient-to-t from-black/80 to-transparent">
-                <p className="text-sm text-[#C8A96A] font-medium tracking-wider uppercase mb-2 mt-4">
-                  {project.category}
-                </p>
+                <div className="flex justify-between items-center mb-2 mt-4">
+                  <p className="text-sm text-[#C8A96A] font-medium tracking-wider uppercase">
+                    {project.category}
+                  </p>
+                  <p className="text-xs text-[#EAEAEA]/50 font-medium">
+                    {project.date}
+                  </p>
+                </div>
                 <h3 className="text-xl md:text-2xl font-semibold tracking-tight group-hover:text-[#C8A96A] transition-colors duration-300">
                   {project.title}
                 </h3>
+                <p className="text-[#EAEAEA]/90 font-medium text-sm mt-1">
+                  {project.subtitle}
+                </p>
                 <p className="mt-3 text-sm text-[#EAEAEA]/80 line-clamp-3 leading-relaxed">
                   {project.description}
                 </p>

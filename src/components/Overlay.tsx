@@ -21,11 +21,14 @@ export default function Overlay() {
         style={{ opacity: opacity1, y: y1 }}
         className="sticky top-0 h-screen w-full flex flex-col items-center justify-center pointer-events-auto"
       >
-        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#EAEAEA]">
+        <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-[#EAEAEA] animate-fadeIn opacity-0">
           Anchal
         </h1>
-        <p className="mt-4 text-xl md:text-2xl text-[#C8A96A] font-light tracking-wide uppercase drop-shadow-[0_0_15px_rgba(200,169,106,0.3)]">
-          Creative Developer
+        <p className="mt-4 text-xl md:text-2xl text-[#C8A96A] font-light tracking-wide uppercase drop-shadow-[0_0_15px_rgba(200,169,106,0.3)] animate-fadeIn opacity-0" style={{ animationDelay: '0.2s' }}>
+          AI/ML Engineer & Builder
+        </p>
+        <p className="mt-2 text-base md:text-lg text-[#EAEAEA]/70 font-light tracking-wide animate-fadeIn opacity-0 max-w-md text-center" style={{ animationDelay: '0.4s' }}>
+          I build intelligent systems that solve real problems.
         </p>
       </motion.div>
     </div>

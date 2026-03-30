@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { useIntersectionObserver } from '@/hooks/useIntersectionObserver';
 
 const skillsLayout = [
   { category: "Languages", value: "Python, C, Java, R" },
@@ -19,43 +19,48 @@ const achievementsList = [
 ];
 
 export default function SkillsAchievements() {
+  const { ref: skillsRef, isVisible: isSkillsVisible } = useIntersectionObserver({ threshold: 0.1, once: true, rootMargin: "-50px" });
+  const { ref: achievesRef, isVisible: isAchievesVisible } = useIntersectionObserver({ threshold: 0.1, once: true, rootMargin: "-50px" });
+
   return (
     <section className="relative w-full bg-[#121212] pt-16 pb-32 px-6 md:px-12 lg:px-24 text-[#EAEAEA] z-20">
       <div className="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
         
         {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
+        <div
+          ref={skillsRef as React.RefObject<HTMLDivElement>}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
             Technical <span className="text-[#C8A96A]">Skills</span>
           </h2>
           <div className="space-y-6">
             {skillsLayout.map((skill, i) => (
-              <div key={i} className="flex flex-col border-b border-[#C8A96A]/10 pb-4 last:border-0 last:pb-0">
+              <div
+                key={i}
+                style={{ transitionDelay: `${i * 0.1}s`, transitionProperty: 'opacity, transform, background-color', transitionDuration: '0.5s, 0.5s, 0.2s', transitionTimingFunction: 'ease' }}
+                className={`flex flex-col border-b border-[#C8A96A]/10 pb-4 p-2 -mx-2 rounded-lg last:border-0 last:pb-2 cursor-default hover:bg-white/5 ${isSkillsVisible ? 'reveal-visible' : 'reveal-hidden'}`}
+              >
                 <span className="text-[#C8A96A] font-medium tracking-wide uppercase text-sm mb-1">{skill.category}</span>
                 <span className="text-[#EAEAEA] font-light text-lg">{skill.value}</span>
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         {/* Achievements */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-          viewport={{ once: true, margin: "-100px" }}
+        <div
+          ref={achievesRef as React.RefObject<HTMLDivElement>}
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-12 tracking-tight">
             Notable <span className="text-[#C8A96A]">Achievements</span>
           </h2>
           <ul className="space-y-4 font-light text-lg text-[#EAEAEA]/90">
             {achievementsList.map((achieve, i) => (
-              <li key={i} className="flex items-start">
+              <li
+                key={i}
+                style={{ transitionDelay: `${i * 0.1}s` }}
+                className={`flex items-start ${isAchievesVisible ? 'reveal-visible' : 'reveal-hidden'}`}
+              >
                 <span className="text-[#C8A96A] mr-3 mt-1">•</span>
                 <span className="leading-relaxed">
                   {achieve.includes('http') ? (
@@ -67,7 +72,7 @@ export default function SkillsAchievements() {
               </li>
             ))}
           </ul>
-        </motion.div>
+        </div>
 
       </div>
     </section>

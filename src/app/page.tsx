@@ -1,11 +1,13 @@
 import ScrollyCanvas from '@/components/ScrollyCanvas';
 import Overlay from '@/components/Overlay';
-import About from '@/components/About';
+import WhatIDo from '@/components/WhatIDo';
+import Arsenal from '@/components/Arsenal';
 import Projects from '@/components/Projects';
+import About from '@/components/About';
 import Experience from '@/components/Experience';
-import Education from '@/components/Education';
-import SkillsAchievements from '@/components/SkillsAchievements';
+import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export default function Home() {
   return (
@@ -14,12 +16,14 @@ export default function Home() {
         <ScrollyCanvas />
         <Overlay />
       </div>
-      <About />
+      <WhatIDo />
+      <Arsenal />
       <Projects />
+      <About />
       <Experience />
-      <Education />
-      <SkillsAchievements />
+      <Skills />
       <Contact />
+      <ScrollToTop />
     </main>
   );
 }
