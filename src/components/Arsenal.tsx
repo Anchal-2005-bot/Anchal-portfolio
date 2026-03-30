@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code2, Briefcase, Cloud, Medal } from 'lucide-react';
+import { Code2, Briefcase, Cloud, Medal, Trophy } from 'lucide-react';
 
 const arsenalItems = [
   {
@@ -29,6 +29,11 @@ const arsenalItems = [
     icon: <Code2 className="w-5 h-5" />,
     label: "LeetCode — 100+ problems solved",
     href: "https://leetcode.com/u/anchalthakur7239/"
+  },
+  {
+    icon: <Trophy className="w-5 h-5" />,
+    label: "Codeforces",
+    href: "https://codeforces.com/profile/Ancchhallll"
   },
   {
     icon: <Briefcase className="w-5 h-5" />,
