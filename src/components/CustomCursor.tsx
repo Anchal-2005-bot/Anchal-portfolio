@@ -4,10 +4,10 @@ import { useEffect, useRef, useState } from 'react';
 
 export default function CustomCursor() {
   const [isMounted, setIsMounted] = useState(false);
+  const [isFinePointer, setIsFinePointer] = useState(true);
   const innerCursorRef = useRef<HTMLDivElement>(null);
   const outerCursorRef = useRef<HTMLDivElement>(null);
   const requestRef = useRef<number>();
-  const isFinePointer = useRef(true);
 
   // Mouse coords
   const mouse = useRef({ x: 0, y: 0 });
@@ -15,9 +15,11 @@ export default function CustomCursor() {
 
   useEffect(() => {
     setIsMounted(true);
-    // Only run on fine pointers
-    isFinePointer.current = window.matchMedia('(pointer: fine)').matches;
-    if (!isFinePointer.current) return;
+    setIsFinePointer(window.matchMedia('(pointer: fine)').matches);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted || !isFinePointer) return;
 
     const inner = innerCursorRef.current;
     const outer = outerCursorRef.current;
@@ -92,13 +94,13 @@ export default function CustomCursor() {
       window.removeEventListener('mouseover', onMouseOver);
       if (requestRef.current) cancelAnimationFrame(requestRef.current);
     };
-  }, []);
+  }, [isMounted, isFinePointer]);
 
   if (!isMounted) {
     return null;
   }
 
-  if (!isFinePointer.current) {
+  if (!isFinePointer) {
     return null;
   }
 
