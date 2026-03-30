@@ -3,21 +3,22 @@
 import { motion } from 'framer-motion';
 
 export default function Contact() {
+
   return (
-    <footer className="relative w-full bg-[#121212] pt-16 pb-24 px-6 md:px-12 lg:px-24 text-[#EAEAEA] z-20 border-t border-[#C8A96A]/10">
+    <footer id="contact" className="relative w-full bg-[#121212] pt-16 pb-24 px-6 md:px-12 lg:px-24 text-[#EAEAEA] z-20 border-t border-[#C8A96A]/10">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center md:items-start gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="text-center md:text-left"
+          className="text-center md:text-left flex-1"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 tracking-tight">
-            Let&apos;s <span className="text-[#C8A96A]">Connect</span>
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
+            Let&apos;s Work <span className="text-[#C8A96A]">Together</span>
           </h2>
-          <p className="text-[#EAEAEA]/60 font-light max-w-sm mb-6">
-            Actively looking for exciting opportunities and collaborations. Feel free to reach out.
+          <p className="text-[#EAEAEA]/60 font-light max-w-sm mb-8 md:mb-0">
+            Open to internships, collaborations, and projects that push AI forward.
           </p>
         </motion.div>
 
@@ -26,18 +27,31 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           viewport={{ once: true, margin: "-50px" }}
-          className="flex flex-col items-center md:items-end space-y-3 font-light text-lg"
+          className="flex flex-col items-center md:items-end space-y-4"
         >
-          <a href="mailto:anchal.kumari.aiml28@heritageit.edu" className="hover:text-[#C8A96A] transition-colors flex items-center gap-2 max-w-[90vw] break-all text-center md:text-right">
-            anchal.kumari.aiml28@heritageit.edu
-          </a>
-          <span className="text-[#EAEAEA]/80 flex items-center gap-2">+91-8084161425</span>
-          <span className="text-[#EAEAEA]/80 flex items-center gap-2">Kolkata, West Bengal</span>
-          <div className="flex gap-6 mt-4 pt-4 border-t border-[#C8A96A]/20">
-            <a href="https://github.com/Anchal-2005-bot" target="_blank" rel="noopener noreferrer" className="text-[#C8A96A] hover:text-[#EAEAEA] transition-colors font-medium">
+          <div className="flex flex-col sm:flex-row gap-4 mb-4">
+            <a
+              href="mailto:anchal.kumari.aiml28@heritageit.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-[#C8A96A] text-[#121212] font-semibold tracking-wide hover:bg-[#EAEAEA] transition-colors duration-300 text-center"
+            >
+              Get In Touch
+            </a>
+            <a
+              href="/anchal-resume.pdf"
+              download
+              className="px-6 py-3 rounded-full bg-transparent border border-[#C8A96A]/50 text-[#C8A96A] font-semibold tracking-wide hover:border-[#C8A96A] hover:bg-[#C8A96A]/10 transition-colors duration-300 text-center"
+            >
+              Download Resume
+            </a>
+          </div>
+
+          <div className="flex gap-6 pt-4 border-t border-[#C8A96A]/20 w-full justify-center md:justify-end">
+            <a href="https://github.com/Anchal-2005-bot" target="_blank" rel="noopener noreferrer" className="text-[#EAEAEA]/60 hover:text-[#C8A96A] transition-colors font-medium">
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/anchal-kumari-6a4995332/" target="_blank" rel="noopener noreferrer" className="text-[#C8A96A] hover:text-[#EAEAEA] transition-colors font-medium">
+            <a href="https://www.linkedin.com/in/anchal-kumari-6a4995332/" target="_blank" rel="noopener noreferrer" className="text-[#EAEAEA]/60 hover:text-[#C8A96A] transition-colors font-medium">
               LinkedIn
             </a>
           </div>
